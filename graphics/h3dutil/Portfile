@@ -4,7 +4,7 @@ PortSystem          1.0
 PortGroup           cmake 1.0
 
 name                h3dutil
-version             1.3.0
+version             1.4.0
 categories          graphics
 platforms           darwin
 maintainers         {@SenseGraphics sensegraphics.com:support}
@@ -19,14 +19,12 @@ long_description    Development files for h3dutil, a utility library for the H3D
 homepage            http://www.h3dapi.org/
 master_sites        ftp://www.h3dapi.org/pub/releases/source/
 
-checksums           rmd160  46b21c38b7cac27262e9ebd9cc3ae67b7a55cc7f \
-                    sha256  0ea04e813a6fd87dc244013c6104d22da92d1771d1cb4f134716be98462a4fb2
+checksums           rmd160  c52286a9f5b669d88c5edb0438da38bfe51b66c9 \
+                    sha256  6661e14ddd59da8d88120b2b699b0eac040bbd6793a318d2c096c857c8139861
 
 depends_lib         port:dcmtk \
                     port:freeimage \
                     port:zlib
-
-patchfiles          patch-CMakeLists.txt.diff
 
 configure.post_args ${worksrcpath}/build
 cmake.out_of_source yes

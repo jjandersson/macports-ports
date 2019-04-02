@@ -4,24 +4,23 @@ PortSystem          1.0
 PortGroup           cmake 1.0
 
 name                h3dmedx3d
-version             1.4.0
+version             1.5.0
 categories          graphics
 platforms           darwin
 maintainers         {@SenseGraphics sensegraphics.com:support}
 license             GPL-2+
 
 description         Extension for H3DAPI for support of the volume rendering component of X3D.
+
 long_description    ${description}
 
 homepage            http://www.h3dapi.org
-master_sites        ftp://www.h3dapi.org/pub/releases/source
+master_sites        ftp://www.h3dapi.org/pub/releases/source/
 
-checksums           rmd160  be169a9c2344f90aee5d35ef77c55a49e2a1713f \
-                    sha256  97e9bf56b91a1e77ee8f2d737bdae601d02bac54a1bbc57a7d0f280841db9b01
+checksums           rmd160  3206fa86eb6be0539fa952db62ea218a3a49e4b6 \
+                    sha256  630363116e823d85e875f6d5adc1eb1751d5e0a7d5323fa6a79f620e0b01711d
 
 depends_lib         port:h3dapi
-
-patchfiles          patch-build-CMakeLists.txt.diff
 
 configure.post_args ${worksrcpath}/build
 cmake.out_of_source yes

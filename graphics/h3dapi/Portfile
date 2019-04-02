@@ -5,14 +5,15 @@ PortGroup           cmake 1.0
 PortGroup           wxWidgets 1.0
 
 name                h3dapi
-version             2.3.0
-revision            2
+version             2.4.0
+revision            1
 categories          graphics
 platforms           darwin
 maintainers         {@SenseGraphics sensegraphics.com:support}
 license             GPL-2+
 
 description         Headers and libraries for H3DAPI development.
+
 long_description    H3DAPI provides is a scenegraph based API with one \
                     unified scene graph to handle both graphics and haptics\
                     based on the X3D standard.
@@ -27,23 +28,27 @@ subport             h3dviewer {
 }
 
 homepage            http://www.h3dapi.org
-master_sites        ftp://www.h3dapi.org/pub/releases/source
+master_sites        ftp://www.h3dapi.org/pub/releases/source/
 
-checksums           rmd160  ca60af0fcd89c309cd030ab509a640b28fd6b470 \
-                    sha256  231104455feea6217c103ab0cbb2187e448000e6f02f9a1f2abb0161a13bbbd1
+checksums           rmd160  4bfbba220a9985f87c258d9ae191bc54e55bbd30 \
+                    sha256  60e82718be851b63b7cbd96d57ff6d0917aed39be98bb287bb42871aa5cc6f10
 
 cmake.out_of_source yes
 
-patchfiles          patch-CMakeLists.txt.diff \
-                    patch-include-H3D-X3DParticleEmitterNode.h.diff \
-                    patch-CMakeListsPython.diff \
-                    patch-glutwindow.diff \
-                    patch-h3dapicmake.diff \
-                    patch-pythonmethods.diff \
-                    patch-pythonscript.diff \
-                    patch-pythontypes.diff \
-                    patch-pytypewrapper.diff \
-                    patch-pythontypesheader.diff
+depends_lib         port:hapi \
+                    port:glew \
+                    port:xercesc \
+                    port:ftgl \
+                    port:libvorbis \
+                    port:audiofile \
+                    port:spidermonkey \
+                    port:fontconfig \
+                    port:freeglut \
+                    port:freetype \
+                    port:bzip2 \
+                    port:curl \
+                    port:python27 \
+                    port:openexr
 
 if {${subport} eq ${name}} {
 

@@ -4,7 +4,7 @@ PortSystem          1.0
 PortGroup           cmake 1.0
 
 name                h3dui
-version             2.3.0
+version             2.4.0
 categories          graphics
 platforms           darwin
 maintainers         {@SenseGraphics sensegraphics.com:support}
@@ -14,14 +14,12 @@ description         Extension for H3DAPI for support of touchable 3D menues.
 long_description    ${description}
 
 homepage            http://www.h3dapi.org
-master_sites        ftp://www.h3dapi.org/pub/releases/source
+master_sites        ftp://www.h3dapi.org/pub/releases/source/
 
-checksums           rmd160  5468159b06ff944f3fe898b0e28019f9db4dd7f3 \
-                    sha256  33ff32ed629fbab411814a41c8767e23281937a56dfcd34d3f360d076d394136
+checksums           rmd160  2d68fb2ff6cfe6f9a6410ad9e38e3a30f646b87b \
+                    sha256  7f9f56d7c4c40e62a12d8f5cbdd4cd8331503142ac376f791c0571da74a2e6ff
 
 depends_lib         port:h3dapi
-
-patchfiles          patch-build-CMakeLists.txt.diff
 
 configure.post_args ${worksrcpath}/build
 cmake.out_of_source yes
